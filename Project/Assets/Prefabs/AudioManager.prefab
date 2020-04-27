@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5987221263753901708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5987221263753900402}
+  - component: {fileID: 5987221263753901709}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5987221263753900402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987221263753901708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.23849103, y: 0, z: 0.71011055}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5987221263753901709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987221263753901708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 019d771f64c077f4fbc361df791039ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffectsMuted: 0
+  sounds:
+  - name: Flying
+    clip: {fileID: 8300000, guid: 9cff9815a6d2dec4ab5ae27f730fe392, type: 3}
+    volumn: 0
+    pitch: 1
+    loop: 1
+    mute: 0
+    source: {fileID: 0}
+  - name: Boost
+    clip: {fileID: 8300000, guid: c98b15f348aa7431eb9619b056e6b9a0, type: 3}
+    volumn: 0.3
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Pop
+    clip: {fileID: 8300000, guid: 8a07e0c43835a4e72ad209b0ffd689c9, type: 3}
+    volumn: 0.7
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: OutOfFuel
+    clip: {fileID: 8300000, guid: 21b8e5bfb4093418f94af1b758ba581e, type: 3}
+    volumn: 0.3
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: 5f4bc6b7c3c554f07b480232944632dc, type: 3}
+    volumn: 0.3
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: FlyingFast
+    clip: {fileID: 8300000, guid: 0a1bd725b02314e0b9e60859789332ea, type: 3}
+    volumn: 0.1
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: WingsIn
+    clip: {fileID: 8300000, guid: eabfc6cd6c5674f219d6dcc6e864a348, type: 3}
+    volumn: 0.3
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: WingsOut
+    clip: {fileID: 8300000, guid: 1a120b43565b24f3ea13cdce19ac7067, type: 3}
+    volumn: 0.3
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Button Highlight
+    clip: {fileID: 8300000, guid: 56a981d7a518dc5469434673039cb606, type: 3}
+    volumn: 0.005
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Play Button
+    clip: {fileID: 8300000, guid: da1d648414e7490498c9c26524211f2f, type: 3}
+    volumn: 1
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Button Click
+    clip: {fileID: 8300000, guid: 251f11c737a8b17478bd3ff2c372aac2, type: 3}
+    volumn: 0.1
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  songs:
+  - name: Theme
+    clip: {fileID: 8300000, guid: c0d5fd54417a54d10bfd10e3db149967, type: 3}
+    volumn: 0.12
+    pitch: 1
+    loop: 1
+    mute: 0
+    source: {fileID: 0}
+  musicMixer: {fileID: -840189874346821228, guid: 93688eb1f1e187444a8da7094b4929c6,
+    type: 2}
+  soundFXMixer: {fileID: 8276391112514951943, guid: 93688eb1f1e187444a8da7094b4929c6,
+    type: 2}
