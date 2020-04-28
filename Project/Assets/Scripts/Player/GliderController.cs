@@ -14,7 +14,7 @@ public class GliderController : MonoBehaviour
     public GameObject boostLight;
     public GameObject EndGameUI;
 
-    public Animator anim;
+    public Animator deathFadeAnim;
     public GameObject CreditsMenuUI;
 
 
@@ -229,7 +229,7 @@ public class GliderController : MonoBehaviour
     {
         
         EndGameUI.SetActive(true);
-        anim.SetTrigger("Death_Fade");
+        deathFadeAnim.SetTrigger("Death_Fade");
         yield return new WaitForSeconds(1.5f);
         EndGameUI.SetActive(false);
         CreditsMenuUI.SetActive(true);
