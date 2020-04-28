@@ -92,8 +92,15 @@ public class MenuController : MonoBehaviour
     }
     public void QuitToMenu()
     {
+        animator.SetTrigger("Fade_Out");
         inMainMenu = true;
+        Invoke("LoadMainMenu", 1);
         Resume();
+    }
+
+    public void LoadMainMenu()
+    {
+        
         SceneManager.LoadScene("Main_Menu_2");
         mainMenuUI.SetActive(true);
     }
