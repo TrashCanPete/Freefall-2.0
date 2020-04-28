@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2612,41 +2612,6 @@ PrefabInstance:
       propertyPath: maxSpeedUI
       value: 
       objectReference: {fileID: 2145530926}
-    - target: {fileID: 876402976663485067, guid: c40fecc86b0a2f242be8fde29d1ccc68,
-        type: 3}
-      propertyPath: windResistanceDivider
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 876402976663485067, guid: c40fecc86b0a2f242be8fde29d1ccc68,
-        type: 3}
-      propertyPath: windResistCounter
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 876402976663485067, guid: c40fecc86b0a2f242be8fde29d1ccc68,
-        type: 3}
-      propertyPath: dropStep
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 876402976663485067, guid: c40fecc86b0a2f242be8fde29d1ccc68,
-        type: 3}
-      propertyPath: stablizeStep
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 876402976663485067, guid: c40fecc86b0a2f242be8fde29d1ccc68,
-        type: 3}
-      propertyPath: stablizeTarget
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 876402976663485067, guid: c40fecc86b0a2f242be8fde29d1ccc68,
-        type: 3}
-      propertyPath: maxDrop
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 876402976663485067, guid: c40fecc86b0a2f242be8fde29d1ccc68,
-        type: 3}
-      propertyPath: unstableDiveMultpler
-      value: 45
-      objectReference: {fileID: 0}
     - target: {fileID: 876402977763883302, guid: c40fecc86b0a2f242be8fde29d1ccc68,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2701,26 +2666,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 876402977763883303, guid: c40fecc86b0a2f242be8fde29d1ccc68,
-        type: 3}
-      propertyPath: canRollRightTarget
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 876402977763883303, guid: c40fecc86b0a2f242be8fde29d1ccc68,
-        type: 3}
-      propertyPath: canRollLeftTarget
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 876402977763883303, guid: c40fecc86b0a2f242be8fde29d1ccc68,
-        type: 3}
-      propertyPath: canRollRightStep
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 876402977763883303, guid: c40fecc86b0a2f242be8fde29d1ccc68,
-        type: 3}
-      propertyPath: canRollLeftStep
-      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 876402977763883345, guid: c40fecc86b0a2f242be8fde29d1ccc68,
         type: 3}
@@ -4923,6 +4868,11 @@ PrefabInstance:
     - target: {fileID: 2315110047759164567, guid: 9cecebf2161dbf342ad854b65d88606c,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2598639964218563174, guid: 9cecebf2161dbf342ad854b65d88606c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2999891395720765742, guid: 9cecebf2161dbf342ad854b65d88606c,
@@ -15979,6 +15929,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flyingStates: {fileID: 0}
   fuel: {fileID: 1594732931}
+  UITankImage: {fileID: 0}
+  FlashRate: 0
+  CurrentLerp: 0
+  BaseColor: {r: 0, g: 0, b: 0, a: 0}
+  FlashColor: {r: 0, g: 0, b: 0, a: 0}
+  Flashing: 0
+  LerpGoingUp: 0
 --- !u!114 &1594732931
 MonoBehaviour:
   m_ObjectHideFlags: 0

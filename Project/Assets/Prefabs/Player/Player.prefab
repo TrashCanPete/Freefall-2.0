@@ -14978,7 +14978,7 @@ MonoBehaviour:
   rot: {x: 0, y: 0, z: 0}
   resistance: 0
   windResistanceAngle: 0
-  windResistanceDivider: 1
+  windResistanceDivider: 2
   canTurnUp: 1
   wingsObj: {fileID: 5092760780805168639}
   streamOn: 4
@@ -15011,9 +15011,9 @@ MonoBehaviour:
   isInTerminalVelocity: 0
   canTerminalBoost: 0
   minDrop: 0.01
-  maxDrop: 3
+  maxDrop: 8
   drop: 0.01
-  dropChange: 0.05
+  dropStep: 0.05
   baseVelocity: {x: 0, y: 0, z: 0}
   addedVelocity: {x: 0, y: 0, z: 0}
   standardMaxVelocity: 100
@@ -15052,6 +15052,15 @@ MonoBehaviour:
   divingParticle: {fileID: 4570197618401782767}
   speedUI: {fileID: 0}
   maxSpeedUI: {fileID: 0}
+  stablizeCounter: 0
+  stablizeTarget: 3
+  stablizeStep: 0.025
+  isStablized: 0
+  unstableDiveMultpler: 45
+  unstableRiseMultpler: 0
+  canBecomeUnstable: 0
+  diveMultplyerPlusThreshold: 0
+  riseMultplyerPlusThreshold: 0
 --- !u!114 &876402977763883356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15121,13 +15130,13 @@ MonoBehaviour:
   isRollingRight: 0
   canRollRight: 0
   canRollRightCounter: 0
-  canRollRightTarget: 0
-  canRollRightStep: 0
+  canRollRightTarget: 1
+  canRollRightStep: 0.025
   isRollingLeft: 0
   canRollLeft: 0
   canRollLeftCounter: 0
-  canRollLeftTarget: 0
-  canRollLeftStep: 0
+  canRollLeftTarget: 1
+  canRollLeftStep: 0.025
   minBoost: 0
   maxBoost: 70
   boostVariable: 0
