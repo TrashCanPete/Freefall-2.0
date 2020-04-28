@@ -87,7 +87,7 @@ public class FlyingStates : MonoBehaviour
     private float maxDrop;
     public float drop;
     [SerializeField]
-    private float dropChange;
+    private float dropStep;
 
 
     //gliders velocity variables----------------------------gliders velocity variables----------------------------gliders velocity variables----------------------------
@@ -199,9 +199,33 @@ public class FlyingStates : MonoBehaviour
     private Text maxSpeedUI;
 
 
+    [SerializeField]
+    private float stablizeCounter;
+    [SerializeField]
+    private float stablizeTarget;
+    [SerializeField]
+    private float stablizeStep;
+    [SerializeField]
+    private bool isStablized;
+    [SerializeField]
+    private float unstableDiveMultpler;
+    [SerializeField]
+    private float unstableRiseMultpler;
+    [SerializeField]
+    private bool canBecomeUnstable;
+
+    //testers
+    [SerializeField]
+    private float diveMultplyerPlusThreshold;
+    [SerializeField]
+    private float riseMultplyerPlusThreshold;
+
+
+
     //Start
     private void Start()
     {
+        isStablized = true;
         burstEm = false;
         fadeInEm = false;
         canTurnUp = true;
@@ -230,10 +254,35 @@ public class FlyingStates : MonoBehaviour
             wingsValue = Mathf.Clamp(wingsValue, 0, 1);
             wingsValue -= (WingsFadeValueBy + wingsOutMultiplyer) * Time.deltaTime;
         }
+
+        drop = Mathf.Clamp(drop, minDrop, maxDrop);
+
+
+
+
         WindResistanceVariable();
         WindResistance();
         windResistanceAngle = -rot.x;
     }
+
+    private void FixedUpdate()
+    {
+        if (isStablized == false)
+        {
+            drop += dropStep;
+            drop = Mathf.Clamp(drop, minDrop, maxDrop);
+        }
+        else
+        {
+            drop = minDrop;
+        }
+
+        diveMultplyerPlusThreshold = diveThreshold + unstableDiveMultpler;
+        riseMultplyerPlusThreshold = riseThreshold + -unstableDiveMultpler;
+
+
+    }
+
 
     //Start of Method
     public void CheckFlyingStates()
@@ -249,8 +298,9 @@ public class FlyingStates : MonoBehaviour
             risingCounterRate = 0;
             divingCounterRate = 0;
             terminalDivingRateCounter = 0;
-            drop = Mathf.Lerp(drop, minDrop, 0.25f);
+
             canTurnUp = true;
+
 
             if (divingCounterRate == 0)
             {
@@ -260,6 +310,20 @@ public class FlyingStates : MonoBehaviour
         //Diving------------------------------------------
         else if (yAngle >= diveThreshold)
         {
+            if (isStablized == false)
+            {
+                
+                if (Input.anyKeyDown)
+                {
+                    Stablized();
+                    canTurnUp = true;
+                }
+            }
+            if(yAngle >= diveThreshold + unstableDiveMultpler)
+            {
+                Stablized();
+                canTurnUp = true;
+            }
 
 
             currentTargetSpeed = divingMaxVelocity;
@@ -305,7 +369,37 @@ public class FlyingStates : MonoBehaviour
         //Rising-----------------------------------
         else if (yAngle <= riseThreshold)
         {
-            //StopCoroutine("MaxWindResistance");
+            canBecomeUnstable = false;
+
+
+            if (yAngle <= (riseThreshold + -unstableDiveMultpler))
+            {
+                if (isBoosting == true)
+                {
+                    canBecomeUnstable = false;
+                }
+                else
+                {
+                    canBecomeUnstable = true;
+                }
+            }
+            if (canBecomeUnstable == true) 
+            {
+                stablizeCounter += stablizeStep;
+                if (stablizeCounter >= stablizeTarget)
+                {
+                    isStablized = false;
+                    canTurnUp = false;
+                }
+
+            }
+            else if (canBecomeUnstable == false)
+            {
+                stablizeCounter = 0;
+            }
+
+
+
             isRising = true;
             if (isRising)
             {
@@ -314,6 +408,12 @@ public class FlyingStates : MonoBehaviour
         }
     }
 
+    void Stablized()
+    {
+        isStablized = true;
+        stablizeCounter = 0;
+        drop = minDrop;
+    }
     private void WindResistanceVariable()
     {
         resistance = windResistanceAngle / windResistanceDivider;
