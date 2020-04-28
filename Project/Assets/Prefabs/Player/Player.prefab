@@ -15074,7 +15074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f2a6697a242024a82a572be66266a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minXAngle: 75
+  minXAngle: 80
   maxXAngle: -85
   currentYawRotationSpeed: 0
   maxYawSpeedRotation: 1.5
@@ -15103,11 +15103,11 @@ MonoBehaviour:
   lookAtOffsetY: 1
   lookAtOffsetZ: 0
   camFollowDist: 2
-  camHeightDist: 1
+  camHeightDist: 1.5
   offSet: 1
   maxFOV: 90
-  minFOV: 60
-  baseFOV: 60
+  minFOV: 50
+  baseFOV: 50
   fovDivision: 4
   cameraSpeed: 0
   cameraSpeedOffset: 10

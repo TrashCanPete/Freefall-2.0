@@ -91,6 +91,6 @@ public class CamFollow : MonoBehaviour
 
         Vector3 moveCamTo = transform.position - transform.forward * camFollowDist + transform.up * (camHeightDist);
         Camera.main.transform.position = moveCamTo;
-        Camera.main.transform.LookAt(lookAtTransform.transform.position, Vector3.up);
+        Camera.main.transform.LookAt(lookAtTransform.transform.position, transform.up);
     }
 }
