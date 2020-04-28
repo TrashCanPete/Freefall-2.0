@@ -94,7 +94,7 @@ public class InputManager : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().PlayAudio("OutOfFuel");
             }
-
+            animationScript.anim.SetBool("Boosting", false);
             flyingStates.isBoosting = false;
             boostUpdater = minBoost;
             FindObjectOfType<AudioManager>().StopPlayingAudio("Boost");
@@ -110,6 +110,7 @@ public class InputManager : MonoBehaviour
                 boostUpdater = maxBoost;
                 FindObjectOfType<AudioManager>().PlayAudio("Boost");
                 boostPop.Play();
+                animationScript.anim.SetBool("Boosting", true);
             }
 
             else if (Input.GetButtonUp("Shift"))
@@ -118,6 +119,7 @@ public class InputManager : MonoBehaviour
 
                 boostUpdater = minBoost;
                 FindObjectOfType<AudioManager>().StopPlayingAudio("Boost");
+                animationScript.anim.SetBool("Boosting", false);
             }
 
         }

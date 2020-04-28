@@ -56,6 +56,8 @@ public class GliderController : MonoBehaviour
     [SerializeField]
     private float slowFallMultiplier;
 
+    public LightScript lightScript;
+
     //Start
     private void Start()
     {
@@ -71,10 +73,13 @@ public class GliderController : MonoBehaviour
         rotationController = GetComponent<RotationController>();
         animationScript = GetComponent<AnimationScript>();
         loadLevel = GetComponent<LoadLevel>();
+        lightScript.light.color = lightScript.Cavecolor;
 
         //boostLight.SetActive(false);
         //windStream.SetActive(false);
         flyingStates.WingStreamsOff();
+        FindObjectOfType<AudioManager>().StopPlayingAudio("Boost");
+
 
         EndGameUI.SetActive(false);
 
