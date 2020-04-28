@@ -105,7 +105,7 @@ public class GliderController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        flyingStates.rot.x += flyingStates.drop;
+
 
         flyingStates.CheckFlyingStates();
         ReduceAddVelocity();
@@ -173,6 +173,8 @@ public class GliderController : MonoBehaviour
             }
         }
 
+
+        flyingStates.rot.x += flyingStates.drop;
         flyingStates.rb.velocity += -Vector3.up * slowFallMultiplier;
 
 
