@@ -15127,7 +15127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationScript: {fileID: 876402977763883358}
-  fuelUIScript: {fileID: 0}
+  fuelUIScript: {fileID: 8363420968036178050}
   audioManager: {fileID: 0}
   boostPop: {fileID: 7855041421544398309}
   isRollingRight: 0
@@ -20406,11 +20406,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 0
   m_Colors:
-    m_NormalColor: {r: 0.84413034, g: 0.28034887, b: 0.9433962, a: 1}
-    m_HighlightedColor: {r: 0, g: 0.97032166, b: 1, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -20453,8 +20453,8 @@ MonoBehaviour:
   UITankImage: {fileID: 6545010903875816373}
   FlashRate: 2
   CurrentLerp: 0
-  BaseColor: {r: 0.84313726, g: 0.2784314, b: 0.94509804, a: 0.9607843}
-  FlashColor: {r: 0.84313726, g: 0.7764706, b: 0.94509804, a: 1}
+  BaseColor: {r: 0.8675069, g: 0.31594875, b: 0.9433962, a: 1}
+  FlashColor: {r: 1, g: 1, b: 1, a: 1}
   Flashing: 1
   LerpGoingUp: 1
 --- !u!1 &7542589130291764138
@@ -20589,8 +20589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 74a418b269ad70a479f7a93a38d54f22, type: 2}
-  m_Color: {r: 0.84413034, g: 0.28034887, b: 0.9433962, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
