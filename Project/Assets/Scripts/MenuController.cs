@@ -29,9 +29,10 @@ public class MenuController : MonoBehaviour
 
     public void PlayGame()
     {
+        animator.SetTrigger("Fade_Out");
         inMainMenu = false;
         mainMenuUI.SetActive(false);
-        LoadGame();
+        Invoke("LoadGame", 1);
     }
 
     void Update()

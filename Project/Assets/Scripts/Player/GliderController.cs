@@ -220,7 +220,7 @@ public class GliderController : MonoBehaviour
         EndGameUI.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         EndGameUI.SetActive(false);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 
     

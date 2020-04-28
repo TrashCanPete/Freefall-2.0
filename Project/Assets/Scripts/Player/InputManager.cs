@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    
     private GliderController gliderController;
     private FlyingStates flyingStates;
     private RotationController rotationController;
@@ -117,7 +118,6 @@ public class InputManager : MonoBehaviour
 
                 boostUpdater = minBoost;
                 FindObjectOfType<AudioManager>().StopPlayingAudio("Boost");
-
             }
 
         }

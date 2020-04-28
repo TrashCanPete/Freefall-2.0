@@ -103,7 +103,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Button Highlight
     clip: {fileID: 8300000, guid: 56a981d7a518dc5469434673039cb606, type: 3}
-    volumn: 0.005
+    volumn: 0.05
     pitch: 1
     loop: 0
     mute: 0
