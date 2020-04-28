@@ -807,6 +807,21 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7333584921604033937, guid: 7bd9acb9fda102f4a88fd6237cd85d70,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333584921604033937, guid: 7bd9acb9fda102f4a88fd6237cd85d70,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333584921604033937, guid: 7bd9acb9fda102f4a88fd6237cd85d70,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7394914441085846040, guid: 7bd9acb9fda102f4a88fd6237cd85d70,
         type: 3}
       propertyPath: m_UiScaleMode
@@ -1761,7 +1776,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 613, y: 59.999985}
+  m_AnchoredPosition: {x: 613, y: 67}
   m_SizeDelta: {x: 1019.6, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &825889836
@@ -2540,7 +2555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7411765}
+  m_Color: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 0.7411765}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2626,7 +2641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 613, y: 198}
+  m_AnchoredPosition: {x: 613, y: 202}
   m_SizeDelta: {x: 1019.6, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1444043276
@@ -3181,7 +3196,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 613, y: -348}
+  m_AnchoredPosition: {x: 613, y: -347}
   m_SizeDelta: {x: 1019.6, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1728899720
@@ -57502,7 +57517,7 @@ MonoBehaviour:
   minDrop: 0.01
   maxDrop: 3
   drop: 0
-  dropChange: 0.05
+  dropStep: 0
   baseVelocity: {x: 0, y: 0, z: 0}
   addedVelocity: {x: 0, y: 0, z: 0}
   standardMaxVelocity: 100
@@ -57541,6 +57556,15 @@ MonoBehaviour:
   divingParticle: {fileID: 5437786898500179280}
   speedUI: {fileID: 0}
   maxSpeedUI: {fileID: 0}
+  stablizeCounter: 0
+  stablizeTarget: 0
+  stablizeStep: 0
+  isStablized: 0
+  unstableDiveMultpler: 0
+  unstableRiseMultpler: 0
+  canBecomeUnstable: 0
+  diveMultplyerPlusThreshold: 0
+  riseMultplyerPlusThreshold: 0
 --- !u!23 &8661520528316541472
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -67265,7 +67289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba19d16ba78d814fabcdd165eba8ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationScript: {fileID: 8661520529221027809}
+  animationScript: {fileID: 0}
   audioManager: {fileID: 0}
   boostPop: {fileID: 1808417715274048346}
   isRollingRight: 0
@@ -67333,22 +67357,6 @@ MonoBehaviour:
   cameraSpeedOffset: 10
   playerRB: {fileID: 8661520529221027815}
   localVel: {x: 0, y: 0, z: 0}
---- !u!114 &8661520529221027809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8661520529221027822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c218bb9424e163648b076fc1c1da872e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 470375466739261054}
-  animationScript: {fileID: 8661520529221027809}
-  rollLeft: 0
-  rollRight: 0
 --- !u!114 &8661520529221027810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67376,6 +67384,7 @@ MonoBehaviour:
   inUpDraft: 0
   currentSpeed: {x: 0, y: 0, z: 0}
   slowFallMultiplier: 0
+  lightScript: {fileID: 0}
 --- !u!114 &8661520529221027811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67467,7 +67476,6 @@ GameObject:
   - component: {fileID: 8661520529221027811}
   - component: {fileID: 8661520529221027808}
   - component: {fileID: 8661520529221027736}
-  - component: {fileID: 8661520529221027809}
   - component: {fileID: 8366136536982819714}
   - component: {fileID: 7795819283234009658}
   - component: {fileID: 8366136537783626024}
