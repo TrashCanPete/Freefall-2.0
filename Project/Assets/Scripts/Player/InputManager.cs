@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     private FlyingStates flyingStates;
     private RotationController rotationController;
     public AnimationScript animationScript;
+    public FuelUI fuelUIScript;
     public AudioManager audioManager;
     public ParticleSystem boostPop;
 
@@ -62,7 +63,6 @@ public class InputManager : MonoBehaviour
         flyingStates = GetComponent<FlyingStates>();
         gliderController = GetComponent<GliderController>();
         audioManager = GetComponent<AudioManager>();
-        
     }
 
 
@@ -107,6 +107,7 @@ public class InputManager : MonoBehaviour
             if (Input.GetButtonDown("Shift"))
             {
                 flyingStates.isBoosting = true;
+                fuelUIScript.Flashing = true;
                 boostUpdater = maxBoost;
                 FindObjectOfType<AudioManager>().PlayAudio("Boost");
                 boostPop.Play();
@@ -116,7 +117,7 @@ public class InputManager : MonoBehaviour
             else if (Input.GetButtonUp("Shift"))
             {
                 flyingStates.isBoosting = false;
-
+                fuelUIScript.Flashing = false;
                 boostUpdater = minBoost;
                 FindObjectOfType<AudioManager>().StopPlayingAudio("Boost");
                 animationScript.anim.SetBool("Boosting", false);

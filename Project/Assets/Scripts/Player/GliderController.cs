@@ -14,6 +14,9 @@ public class GliderController : MonoBehaviour
     public GameObject boostLight;
     public GameObject EndGameUI;
 
+    public Animator deathFadeAnim;
+    public GameObject CreditsMenuUI;
+
 
 
     private float colliderXIn = 0.3f;
@@ -56,7 +59,7 @@ public class GliderController : MonoBehaviour
     [SerializeField]
     private float slowFallMultiplier;
 
-    public LightScript lightScript;
+   // public LightScript lightScript;
 
     //Start
     private void Start()
@@ -73,7 +76,7 @@ public class GliderController : MonoBehaviour
         rotationController = GetComponent<RotationController>();
         animationScript = GetComponent<AnimationScript>();
         loadLevel = GetComponent<LoadLevel>();
-        lightScript.light.color = lightScript.Cavecolor;
+       // lightScript.light.color = lightScript.Cavecolor;
 
         //boostLight.SetActive(false);
         //windStream.SetActive(false);
@@ -224,9 +227,12 @@ public class GliderController : MonoBehaviour
     }
     private IEnumerator WaitToEndGame()
     {
+        
         EndGameUI.SetActive(true);
+        deathFadeAnim.SetTrigger("Death_Fade");
         yield return new WaitForSeconds(1.5f);
         EndGameUI.SetActive(false);
+        CreditsMenuUI.SetActive(true);
         SceneManager.LoadScene(2);
     }
 

@@ -25,6 +25,7 @@ public class FuelUI : MonoBehaviour
     [SerializeField]
     Color FlashColor;
 
+
     public bool Flashing;
     public bool LerpGoingUp;
 
@@ -37,6 +38,8 @@ public class FuelUI : MonoBehaviour
         fuel = GetComponent<Slider>();
         fuel.maxValue = flyingStates.maxBoostFuel;
         fuel.value = flyingStates.boostFuel;
+        Flashing = false;
+        LerpGoingUp = true;
         
     }
 
@@ -64,11 +67,12 @@ public class FuelUI : MonoBehaviour
                 }
             }
 
-            UITankImage.color = Color.Lerp(BaseColor, FlashColor, CurrentLerp);
+
+            UITankImage.material.color = Color.Lerp(BaseColor, FlashColor, CurrentLerp);
         }
         else
         {
-            UITankImage.color = BaseColor;
+            UITankImage.material.color = BaseColor;
         }
 
         fuel.value = flyingStates.boostFuel;
