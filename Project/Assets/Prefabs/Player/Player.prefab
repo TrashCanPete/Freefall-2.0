@@ -14951,7 +14951,7 @@ MonoBehaviour:
   windStream: {fileID: 876402976338633809}
   boostLight: {fileID: 876402977802414127}
   EndGameUI: {fileID: 0}
-  anim: {fileID: 0}
+  deathFadeAnim: {fileID: 0}
   CreditsMenuUI: {fileID: 0}
   upDraftForwardVelocity: 0.5
   maxCurrentSpeedInUpDraft: 50
