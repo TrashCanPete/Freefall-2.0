@@ -15,7 +15,7 @@ public class GliderController : MonoBehaviour
     public GameObject EndGameUI;
 
     public Animator deathFadeAnim;
-    public GameObject CreditsMenuUI;
+    public GameObject creditsMenu;
 
 
 
@@ -66,6 +66,8 @@ public class GliderController : MonoBehaviour
     {
         inUpDraft = false;
         audio = FindObjectOfType<AudioManager>();
+
+        creditsMenu = GameObject.Find("/Menu Canvas/Credits Menu");
 
         //Calling Scripts
         debugLines = GetComponent<DebugLines>();
@@ -204,8 +206,14 @@ public class GliderController : MonoBehaviour
         if (other.tag == ("Finish"))
         {
             Debug.Log("Finish");
+                     
+            creditsMenu.SetActive(true);
+            //EndGameUI.SetActive(true);
+            deathFadeAnim.SetTrigger("Death_Fade");
             StartCoroutine("WaitToEndGame");
         }
+        
+
         else if (other.tag == ("Oxygen"))
         {
             UpDraftCounter(_collison.Oxygen);
@@ -227,13 +235,10 @@ public class GliderController : MonoBehaviour
     }
     private IEnumerator WaitToEndGame()
     {
-        
-        EndGameUI.SetActive(true);
-        deathFadeAnim.SetTrigger("Death_Fade");
         yield return new WaitForSeconds(1.5f);
-        EndGameUI.SetActive(false);
-        CreditsMenuUI.SetActive(true);
-        SceneManager.LoadScene(2);
+        //EndGameUI.SetActive(false);
+        SceneManager.LoadScene("Credits_Scene");
+        
     }
 
     
