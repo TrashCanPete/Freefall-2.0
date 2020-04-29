@@ -6,11 +6,8 @@ using UnityEngine;
 
 public class ReturntoMenu : MonoBehaviour
 {
-   
     public void LoadScene()
     {
         SceneManager.LoadScene("Main_Menu_2");
     }
-
-
 }

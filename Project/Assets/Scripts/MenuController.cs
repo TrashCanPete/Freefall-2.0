@@ -19,7 +19,6 @@ public class MenuController : MonoBehaviour
     public GameObject backButton2;
     public GameObject backButton3;
     public GameObject backButton4;
-    public GameObject MenuCanvas;
 
 
 
@@ -51,8 +50,8 @@ public class MenuController : MonoBehaviour
                 {
                     Pause();
                 }
-            }
-        }
+            }       
+        } 
     }
 
     public void Resume()
@@ -76,7 +75,7 @@ public class MenuController : MonoBehaviour
         Time.timeScale = 0f;
         mainMenuUI.SetActive(false);
         pauseMenuUI.SetActive(true);
-
+        
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
@@ -101,6 +100,7 @@ public class MenuController : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        
         SceneManager.LoadScene("Main_Menu_2");
         mainMenuUI.SetActive(true);
     }
