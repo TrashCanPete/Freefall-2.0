@@ -67,7 +67,8 @@ public class GliderController : MonoBehaviour
         inUpDraft = false;
         audio = FindObjectOfType<AudioManager>();
 
-        creditsMenu = GameObject.Find("/Menu Canvas/Credits Menu");
+        creditsMenu = GameObject.Find("Credits Menu");
+        creditsMenu.SetActive(false);
 
         //Calling Scripts
         debugLines = GetComponent<DebugLines>();
@@ -206,8 +207,7 @@ public class GliderController : MonoBehaviour
         if (other.tag == ("Finish"))
         {
             Debug.Log("Finish");
-                     
-            creditsMenu.SetActive(true);
+            FindObjectOfType<GameMaster>().lastCheckpointPos = new Vector3(480.8f, 958, -11316.4f);
             //EndGameUI.SetActive(true);
             deathFadeAnim.SetTrigger("Death_Fade");
             StartCoroutine("WaitToEndGame");
@@ -237,6 +237,7 @@ public class GliderController : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         //EndGameUI.SetActive(false);
+        creditsMenu.SetActive(true);
         SceneManager.LoadScene("Credits_Scene");
         
     }

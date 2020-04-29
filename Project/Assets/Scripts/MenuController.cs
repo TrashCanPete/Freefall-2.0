@@ -14,6 +14,7 @@ public class MenuController : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
     public GameObject controlsMenuUI;
+    public GameObject creditsMenu;
     public GameObject confirmationScreen;
     public GameObject backButton1;
     public GameObject backButton2;
@@ -89,7 +90,9 @@ public class MenuController : MonoBehaviour
 
     public void LoadGame()
     {
+        creditsMenu.SetActive(true);
         SceneManager.LoadScene("Main_GameScene");
+        
     }
     public void QuitToMenu()
     {

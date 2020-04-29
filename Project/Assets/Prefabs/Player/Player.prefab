@@ -14952,7 +14952,7 @@ MonoBehaviour:
   boostLight: {fileID: 876402977802414127}
   EndGameUI: {fileID: 0}
   deathFadeAnim: {fileID: 0}
-  CreditsMenuUI: {fileID: 0}
+  creditsMenu: {fileID: 0}
   upDraftForwardVelocity: 0.5
   maxCurrentSpeedInUpDraft: 50
   oxygenPlantBoost: 2
@@ -15191,6 +15191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!114 &1112446871
 MonoBehaviour:
   m_ObjectHideFlags: 0

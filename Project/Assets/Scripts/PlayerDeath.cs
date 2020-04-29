@@ -9,12 +9,13 @@ public class PlayerDeath : MonoBehaviour
 
     private void Start()
     {
-        
+
     }
     public void Death()
     {
         Invoke("ReloadCheckpoint", 2f);
         anim.SetTrigger("Death_Fade");
+        GameObject.FindObjectOfType<AudioManager>().PlayAudio("Dead");
     }
 
     void ReloadCheckpoint()
