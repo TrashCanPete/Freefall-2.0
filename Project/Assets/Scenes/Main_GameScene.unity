@@ -9157,6 +9157,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1890049844}
     m_Modifications:
+    - target: {fileID: -4216859302048453862, guid: 30ced49318becb2499cdca4bda66f904,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 432.0849
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 30ced49318becb2499cdca4bda66f904,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9443a0d11dee9a14996fb1cb69e0621a,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -9231,16 +9241,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WallStraight_01 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 30ced49318becb2499cdca4bda66f904,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 432.0849
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 30ced49318becb2499cdca4bda66f904,
-        type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9443a0d11dee9a14996fb1cb69e0621a, type: 3}
@@ -15714,6 +15714,12 @@ PrefabInstance:
 --- !u!1 &1585737485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5743617578371800378, guid: 7bd9acb9fda102f4a88fd6237cd85d70,
+    type: 3}
+  m_PrefabInstance: {fileID: 1585737484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1585737486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7394914441085846046, guid: 7bd9acb9fda102f4a88fd6237cd85d70,
     type: 3}
   m_PrefabInstance: {fileID: 1585737484}
   m_PrefabAsset: {fileID: 0}
@@ -24480,6 +24486,11 @@ PrefabInstance:
       propertyPath: creditsMenu
       value: 
       objectReference: {fileID: 1585737485}
+    - target: {fileID: 876402977763883357, guid: c40fecc86b0a2f242be8fde29d1ccc68,
+        type: 3}
+      propertyPath: MenuCanvas
+      value: 
+      objectReference: {fileID: 1585737486}
     - target: {fileID: 1741253199580449925, guid: c40fecc86b0a2f242be8fde29d1ccc68,
         type: 3}
       propertyPath: anim

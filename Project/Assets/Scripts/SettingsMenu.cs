@@ -45,7 +45,6 @@ public class SettingsMenu : MonoBehaviour
     }
     private void Awake()
     {
-        //Audio Design
         if (instance == null)
         {
             instance = this;
