@@ -5006,6 +5006,7 @@ GameObject:
   - component: {fileID: 876402976238416140}
   - component: {fileID: 876402976238416143}
   - component: {fileID: 8702095720456354479}
+  - component: {fileID: 1823082924}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5138,6 +5139,37 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &1823082924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876402976238416129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_CameraOutput: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &876402976307117407
 GameObject:
   m_ObjectHideFlags: 0
@@ -14951,7 +14983,7 @@ MonoBehaviour:
   windStream: {fileID: 876402976338633809}
   boostLight: {fileID: 876402977802414127}
   EndGameUI: {fileID: 0}
-  anim: {fileID: 0}
+  deathFadeAnim: {fileID: 0}
   CreditsMenuUI: {fileID: 0}
   upDraftForwardVelocity: 0.5
   maxCurrentSpeedInUpDraft: 50
@@ -15190,7 +15222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b0fa7267757774aa387dcb16b7485a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 8258870696273354945}
 --- !u!114 &1112446871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22846,21 +22878,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38209f81b82fe404f973edd34ef33ce1, type: 3}
---- !u!1 &5092760780805168639 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2288056045045709662, guid: 38209f81b82fe404f973edd34ef33ce1,
-    type: 3}
-  m_PrefabInstance: {fileID: 6444035525992818337}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8922655386512629843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2503565880995284722, guid: 38209f81b82fe404f973edd34ef33ce1,
     type: 3}
   m_PrefabInstance: {fileID: 6444035525992818337}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1320058918709489490 stripped
+--- !u!4 &2024197495446638011 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -3802134588326721037, guid: 38209f81b82fe404f973edd34ef33ce1,
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 38209f81b82fe404f973edd34ef33ce1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6444035525992818337}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5092760780805168639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2288056045045709662, guid: 38209f81b82fe404f973edd34ef33ce1,
     type: 3}
   m_PrefabInstance: {fileID: 6444035525992818337}
   m_PrefabAsset: {fileID: 0}
@@ -22870,9 +22902,9 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 6444035525992818337}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2024197495446638011 stripped
+--- !u!4 &1320058918709489490 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 38209f81b82fe404f973edd34ef33ce1,
+  m_CorrespondingSourceObject: {fileID: -3802134588326721037, guid: 38209f81b82fe404f973edd34ef33ce1,
     type: 3}
   m_PrefabInstance: {fileID: 6444035525992818337}
   m_PrefabAsset: {fileID: 0}

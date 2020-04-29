@@ -174,7 +174,7 @@ public class GliderController : MonoBehaviour
         if (inUpDraft == true)
         {
             currentSpeed = flyingStates.rb.velocity;
-            var upDraftBoost = 3;
+            var upDraftBoost = 4;
             for (int i = 0; i < upDraftBoost; i++)
             {
                 flyingStates.addedVelocity += (updraftDirection);

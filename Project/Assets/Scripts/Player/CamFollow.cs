@@ -74,7 +74,7 @@ public class CamFollow : MonoBehaviour
         {
             var _currentSpeed = gliderController.currentSpeed;
             localVel = transform.InverseTransformDirection(playerRB.velocity += _currentSpeed);
-            Camera.main.fieldOfView = baseFOV + ((localVel.z / fovDivision) + 40);
+            Camera.main.fieldOfView = baseFOV + ((localVel.z / fovDivision) + 20);
         }
         else
         {
